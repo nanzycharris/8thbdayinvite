@@ -5,64 +5,24 @@ function hideIntro() {
 $(document).ready(function () {
     var options = [
         {
-            question: "Author of \"Holes\" and \"Sideway Stories from Wayside School\" among other chapter books popular among young readers. Winner of the National Book Award and Newbery Medal.",
-            choice: ["Gary Paulsen", "Stanley Sachar", "Louis Sachar", "Anna Sewell"],
-            answer: 2,
-        },
-        {
-            question: "This classic novel written by Anna Sewell was first published in 1877. It is considered the predecessor of a genre later known as pony books.",
-            choice: ["War Horse", "Black Beauty", "National Velvet", "The Black Stallion"],
-            answer: 1,
-        },
-        {
-            question: "This picture book by prolific author and illustrator Eric Carle celebrated its 50th anniversary in 2019. It is a favorite of kindergarten teachers and students because it involves curriculum related themes such as growth, numbers, and days of the week.",
-            choice: ["The Very Hungry Caterpillar", "Brown Bear, Brown Bear, What Do You See?", "Today is Monday", "Mister Seahorse"],
+            question: "When will we celebrate Teresa's 8th birthday?",
+            choice: ["Sunday, March 8th, 2020", "Monday, February 30th, 2020", "Thursday, October 30th, 2020"],
             answer: 0,
         },
         {
-            question: "Written and illustrated by Shel Silverstein, this children\'s picture book had sold over 8.5 million copies by 2011 and has been translated into numerous languages. Its interpretation has been dividing readers since 1964 when it was published by Harper & Row.",
-            choice: ["Where the Sidewalk Ends", "Runny Rabbit", "Where the Wild Things Are", "The Giving Tree"],
-            answer: 3,
-        },
-        {
-            question: "Born in 1899, this American author was a long-time contributor to The New Yorker, in addition to writing classic children\'s books such as \"Charlotte\'s Web\" and \"Stuart Little.\"",
-            choice: ["E. B. White", "Truman Capote", "J. D. Salinger", "Roald Dahl"],
-            answer: 0,
-        },
-        {
-            question: "Literary award given annually by the Association for Library Service to Children (ALSC), a division of the American Library Association (ALA) to the author of \"the most distinguished contribution to American literature for children.\" Among its recipients are Louis Sachar, Marguerite Henry, and Kate DiCamillo.",
-            choice: ["Hans Christian Andersen Award", "Newbery Medal", "Caldecott Medal", "Carnegie Medal"],
+            question: "Where will we celebrate Teresa's 8th birthday?",
+            choice: ["Taqueria Leo's in Reynosa", "Build-a-Bear at Galleria Mall", "Jabba The Hut's Bar"],
             answer: 1,
         },
         {
-            question: "This author and illustrator was the first to introduce the technique of collage on children\'s picture books. He was a recipient of the Lewis Carroll Shelf Award. Among his books are \"Inch by Inch,\" \"A Color of His Own,\" and \"Alexander and the Wind-up Mouse.\"",
-            choice: ["Eric Carle", "Shel Silberstein", "Leo Lionni", "Mo Willems"],
+            question: "Where will we go to have pizza and cake for Teresa's 8th birthday?",
+            choice: ["Mos Eisley Cantina", "The Mandalorian", "Lucciano's Pizzeria"],
             answer: 2,
         },
         {
-            question: "This British author not only has sold over 250 million copies worldwide, he also was a poet, screenwriter, and fighter pilot. He authored beloved children\'s literature works such as \"Matilda,\" \"Charlie and the Chocolate Factory,\" and \"The Witches.\"",
-            choice: ["C. S. Lewis", "John Newbery", "Charles Dickens", "Roald Dahl"],
-            answer: 3,
-        },
-        {
-            question: "This novel by Kate DiCamillo was awarded the 2004 Newbery Medal. Divided into four \"books\" and finalized in a coda, the main plot tells the adventures of a little mouse who can read and sets out on a quest of honor and love.",
-            choice: ["The Tale of Despereaux", "Stuart Little", "Alexander and the Wind-up Mouse", "An American Tail"],
-            answer: 0,
-        },
-        {
-            question: "Author of bedtime classic picture books like \"Goodnight Moon,\" \"The Runaway Bunny,\" and \"Big Red Barn;\" also wrote under the pseudonym Golden MacDonald.",
-            choice: ["Felicia Bond", "Margaret Wise Brown", "Clement Hurd", "David Shannon"],
-            answer: 1,
-        },
-        {
-            question: "This American children\'s author and illustrator is better known by the pen name under which he wrote more than 60 titles. Among his books are \"Horton Hears a Who,\" \"Green Eggs and Ham,\" \"The Cat in the Hat,\" and \"How the Grinch Stole Christmas\!\"",
-            choice: ["Gene Zion", "P. D. Eastman", "Theodor Seuss Geisel", "Michael Bond"],
+            question: "Can you guess which theme Teresa chose for her 8th birthday celebration?",
+            choice: ["Unicorns", "Frozen 2", "Star Wars"],
             answer: 2,
-        },
-        {
-            question: "This popular series of children\'s books was founded in 1942. Many of its titles have become best sellers, such as \The Little Red Hen,\" \"The Poky Little Puppy,\" and \"The Monster at the End of This Book.\"",
-            choice: ["Scholastic Book Club", "Red Randall Series", "Golden Goose Books", "Little Golden Books"],
-            answer: 3,
         },
     ];
 
@@ -79,6 +39,10 @@ $(document).ready(function () {
     var newArray = [];
     var holder = [];
 
+    function collegeFund() {
+        var str = "College Fund";
+        var result = str.link("https://www.ugift529.com/");
+    }
 
     $("#reset").hide();
 
@@ -169,14 +133,14 @@ $(document).ready(function () {
             // Final score
             if ((wrongCount + correctCount + unanswerCount) === qCount) {
                 $("#questionblock").empty();
-                $("#questionblock").html("<h3>Great job! Your results are: </h3>");
-                $("#answerblock").append("<h4>Correct answers: " + correctCount + "</h4>");
-                $("#answerblock").append("<h4>Wrong answers: " + wrongCount + "</h4>");
-                $("#answerblock").append("<h4>No answer: " + unanswerCount + "</h4>");
-                $("#reset").show();
-                correctCount = 0;
-                wrongCount = 0;
-                unanswerCount = 0;
+                $("#questionblock").html("<h3>Great job! You're a winner and we want you to be our guest!<br><br> Here are the details to Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, join us for pizza and cake downstairs at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href>www.ugift529.com</a href> and use the code N7W-N5Y <br><br>We look forward to seeing you there!</h3>");
+                // $("#answerblock").append("<h4>Correct answers: " + correctCount + "</h4>");
+                // $("#answerblock").append("<h4>Wrong answers: " + wrongCount + "</h4>");
+                // $("#answerblock").append("<h4>No answer: " + unanswerCount + "</h4>");
+                // $("#reset").show();
+                // correctCount = 0;
+                // wrongCount = 0;
+                // unanswerCount = 0;
             } else {
                 runTimer();
                 displayQuestion();
@@ -195,3 +159,4 @@ $(document).ready(function () {
         displayQuestion();
     })
 })
+

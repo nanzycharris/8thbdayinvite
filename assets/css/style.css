@@ -3,9 +3,10 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'PT Sans Caption', sans-serif;
+    letter-spacing: 0px;
     --hue: var(--hue-neutral);
-    background-image: url(../images/ChildrensLiteratureBackground.jpg);
+    background-image: url(../images/starwarsmillenium.jpg);
     padding: 0;
     margin: 0;
     display: flex;
@@ -30,24 +31,33 @@ body {
 
 #triviaHeader {
     font-weight: 600;
-    font-size: 18px;
-    color: purple;
-    background-color: rgb(238, 182, 182);
+    font-size: 22px;
+    color: black;
+    background-color:rgb(250, 213, 1);
 }
 
 h4 {
     font-weight: 400;
-    font-size: 17;
+    font-size: 18px;
     text-align: center;
-    color:  rgb(100, 7, 100);
+    color:  rgb(15, 15, 15);
     position: relative;
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color:  rgb(15, 15, 15);
+  position: relative;
+}
+
 #start {
-    background-color:rgb(238, 182, 182);
-    color:  rgb(100, 7, 100);
+    background-color:rgb(250, 213, 1);
+    color:  rgb(8, 8, 8);
     font-size: 21px;
-    border: solid 2px rgb(238, 182, 182);
+    border: solid 2px yellow;
     padding: 10px;
     padding-left: 16px;
     padding-right: 16px;
@@ -55,20 +65,20 @@ h4 {
 
 #timeleft {
     background: transparent;
-    color:  rgb(173, 8, 179);
+    color:  rgb(14, 13, 14);
     font-size: 20px;
     font-weight: 600;
     text-align: center;
 }
 .answerchoice {
-    border: solid 2px rgb(238, 182, 182);
+    border: solid 2px rgb(243, 208, 8);
     border-radius: 5%;
-	width: 40%;
-	color:  rgb(100, 7, 100);
+	  width: 40%;
+	  color:  black;
     text-align: center;
     margin: 10px auto;
     font-size: 18px;
-    background-color:rgb(238, 182, 182);
+    background-color:rgb(243, 208, 8);
     padding: 7px;
 }
 
@@ -80,14 +90,14 @@ h4 {
   font-size: 18px;
   text-align: center;
   font-weight: 500;
-  color:  rgb(100, 7, 100);
+  color:black;
 }
 
 #reset {
-    background-color:rgb(238, 182, 182);
-    color:  rgb(100, 7, 100);
+    background-color:rgb(250, 213, 1);
+    color:  black;
     font-size: 21px;
-    border: solid 2px rgb(238, 182, 182);
+    border: solid 2px rgb(250, 213, 1);
     padding: 10px;
     padding-left: 16px;
     padding-right: 16px;
@@ -102,7 +112,7 @@ h4 {
 p {
   text-align: center;
   font-weight: 400;
-  color:  rgb(160, 10, 160);
+  color:  black;
   font-size: 20px;
 }
 
