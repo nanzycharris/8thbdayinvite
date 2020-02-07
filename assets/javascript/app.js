@@ -133,7 +133,7 @@ $(document).ready(function () {
             // Final score
             if ((wrongCount + correctCount + unanswerCount) === qCount) {
                 $("#questionblock").empty();
-                $("#questionblock").html("<h3>Great job! You're a winner and we want you to be our guest!<br><br> Here are the details to Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, join us for pizza and cake downstairs at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href>www.ugift529.com</a href> and use the code N7W-N5Y <br><br>We look forward to seeing you there!</h3>");
+                $("#questionblock").html("<h3>Great job! You're a winner and we want you to be our guest!<br><br> Here are the details to Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, join us downstairs for pizza and cake at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href>www.ugift529.com</a href> and use the code N7W-N5Y <br><br>We look forward to seeing you there!</h3>");
                 // $("#answerblock").append("<h4>Correct answers: " + correctCount + "</h4>");
                 // $("#answerblock").append("<h4>Wrong answers: " + wrongCount + "</h4>");
                 // $("#answerblock").append("<h4>No answer: " + unanswerCount + "</h4>");
