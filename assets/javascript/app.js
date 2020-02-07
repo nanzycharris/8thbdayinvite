@@ -39,10 +39,6 @@ $(document).ready(function () {
     var newArray = [];
     var holder = [];
 
-    function collegeFund() {
-        var str = "College Fund";
-        var result = str.link("https://www.ugift529.com/");
-    }
 
     $("#reset").hide();
 
