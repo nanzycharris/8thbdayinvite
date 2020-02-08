@@ -134,7 +134,7 @@ $(document).ready(function () {
                 $("#timeleft").hide();
             } else if (((wrongCount + unanswerCount + correctCount) === qCount) && (wrongCount + unanswerCount) >= correctCount) {
                 $("#questionblock").empty();
-                $("#questionblock").html("<h3>Sorry... you need more correct answers to unlock <br> <br> all the details to Teresa's birthday party <br> <br>Please try again by clicking the Restart button.</h3>");
+                $("#questionblock").html("<h3>Sorry... you need more correct answers to unlock <br> <br> all the details to Teresa's 8th birthday party.<br> <br>Please try again by clicking the Restart button.</h3>");
                 $("#timeleft").hide();
                 $("#reset").show();
             } else {
