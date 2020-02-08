@@ -38,6 +38,8 @@ $(document).ready(function () {
     var index = 0;
     var newArray = [];
     var holder = [];
+    var text = "www.ugift529.com"
+    var URL = "https://www.ugift529.com/"
 
 
     $("#reset").hide();
@@ -128,7 +130,7 @@ $(document).ready(function () {
             // Ending the game winning or losing
             if (((wrongCount + unanswerCount) < correctCount) && ((wrongCount + unanswerCount + correctCount) === qCount)) {
                 $("#questionblock").empty();
-                $("#questionblock").html("<h3>Great job! You're a winner and we want you to be part of our rebellion!<br><br>Come join the resistance at Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, come downstairs for pizza and cake at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href=url>www.ugift529.com</a> and use the code N7W-N5Y <br><br>Please RSVP via text message to Nancy<br><br>We look forward to seeing you there!</h3>");
+                $("#questionblock").html("<h3>Great job! You're a winner and we want you to be part of our rebellion!<br><br>Come join the resistance at Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, come downstairs for pizza and cake at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href='https://www.ugift529.com' target='_blank'>www.ugift529.com</a> and use the code N7W - N5Y <br> <br>Please RSVP via text message to Nancy.<br><br>We look forward to seeing you there!</h3>");
                 $("#timeleft").hide();
             } else if (((wrongCount + unanswerCount + correctCount) === qCount) && (wrongCount + unanswerCount) >= correctCount) {
                 $("#questionblock").empty();
