@@ -35,7 +35,7 @@ $(document).ready(function () {
     var running = false;
     var qCount = options.length;
     var pick;
-    var index;
+    var index = 0;
     var newArray = [];
     var holder = [];
 
@@ -84,7 +84,6 @@ $(document).ready(function () {
     // Display the question and answer choices
     function displayQuestion() {
         // Questions display in the order they are written
-        index = Math.floor(i < options.length);
         pick = options[index];
 
         $("#questionblock").html("<h2>" + pick.question + "</h2>");
@@ -120,7 +119,7 @@ $(document).ready(function () {
     function nextQuestion() {
         $("#answerblock").append();
         newArray.push(pick);
-        options.splice(index, 1);
+        index++
 
         var nextQ = setTimeout(function () {
             $("#answerblock").empty();
@@ -131,7 +130,7 @@ $(document).ready(function () {
                 $("#questionblock").empty();
                 $("#questionblock").html("<h3>Great job! You're a winner and we want you to be part of our rebellion!<br><br>Come join the resistance at Teresa's 8th Birthday Party: <br><br>Date: Sunday, March 8th, 2020 at 2:30 p.m. <br><br>Place: Build-a-Bear at Galleria Mall <br><br>Afterwards, come downstairs for pizza and cake at Lucciano's Pizzeria. <br><br>In lieu of presents, please make a gift to Teresa's college fund.<br><br> To donate, click here: <a href>www.ugift529.com</a href> and use the code N7W-N5Y <br><br>Please RSVP via text message to Nancy<br><br>We look forward to seeing you there!</h3>");
                 $("#timeleft").hide();
-            } else if (((wrongCount + unanswerCount + correctCount) === qCount) && (wrongCount + unanswerCount) > correctCount) {
+            } else if (((wrongCount + unanswerCount + correctCount) === qCount) && (wrongCount + unanswerCount) >= correctCount) {
                 $("#questionblock").empty();
                 $("#questionblock").html("<h3>Sorry... you need more correct answers to unlock <br> <br> all the details to Teresa's birthday party <br> <br>Please try again by clicking the Restart button.</h3>");
                 $("#timeleft").hide();
@@ -148,8 +147,13 @@ $(document).ready(function () {
         $("#answerblock").empty();
         $("#questionblock").empty();
         for (var i = 0; i < holder.length; i++) {
+            console.log(holder)
             options.push(holder[i]);
         }
+        index = 0;
+        wrongCount = 0;
+        unanswerCount = 0;
+        correctCount = 0;
         runTimer();
         displayQuestion();
     }
